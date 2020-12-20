@@ -35,5 +35,18 @@ namespace Week02.Controllers
             }
             return View(sp);
         }
+
+        public ActionResult SearchProducts(String name)
+        {
+            Model1 db = new Model1();
+            List<SANPHAM> sp;
+            if (name == null || name == "")
+                sp = db.SANPHAMs.ToList();
+            else
+            {
+                sp = db.SANPHAMs.Where(abc => abc.Ten.IndexOf(name) > -1).ToList();
+            }
+            return View("Products",sp);
+        }
     }
 }

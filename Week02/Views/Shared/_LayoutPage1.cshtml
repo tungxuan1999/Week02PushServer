@@ -109,8 +109,8 @@
                             <li class="" id="nFourColumn"><a href="four-col.html">Four Column</a></li>
                             <li class="" id="nGeneralContent"><a href="general.html">General Content</a></li>
                         </ul>
-                        <form action="#" class="navbar-search pull-left">
-                            <input type="text" placeholder="Search" class="search-query span2">
+                        <form action="@Url.Action("SearchProducts", "Product")" class="navbar-search pull-left">
+                            <input type="text" placeholder="Search" name="name" class="search-query span2">
                         </form>
                         <ul class="nav pull-right">
                             <li class="dropdown">
